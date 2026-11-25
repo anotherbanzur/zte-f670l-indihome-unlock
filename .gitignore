@@ -1,0 +1,6 @@
+*.bin
+*.dec
+*.log
+pw.txt
+__pycache__/
+
