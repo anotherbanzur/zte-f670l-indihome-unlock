@@ -11,7 +11,7 @@ lewat gerbang factory mode (`/webFac`), dan mengambil kendali penuh atas TR-069 
 
 ---
 
-## 🎯 Tujuan utama toolkit
+##  Tujuan utama toolkit
 
 ### 1. Memulihkan akses superadmin yang diambil alih ISP
 Sejak IndiHome dikelola Telkomsel, password akun `admin` di ONT **di-randomize per-unit
@@ -34,7 +34,7 @@ yang terdokumentasi bila suatu saat provisioning ISP dibutuhkan lagi.
 
 ---
 
-## 🔄 Alur kerja end-to-end
+##  Alur kerja end-to-end
 
 ```
                        ┌──────────────────────────────┐
@@ -69,7 +69,7 @@ yang terdokumentasi bila suatu saat provisioning ISP dibutuhkan lagi.
 
 ---
 
-## 📦 Detail setiap service
+##  Detail setiap service
 
 ### `scripts/factory_unlock.py` — Pembuka gerbang factory mode
 - **Tujuan**: mengubah kredensial web admin menjadi **kredensial telnet root sementara**.
@@ -151,7 +151,7 @@ yang terdokumentasi bila suatu saat provisioning ISP dibutuhkan lagi.
 
 ---
 
-## 🧭 Skenario pemakaian umum
+##  Skenario pemakaian umum
 
 **A. "Password superadmin saya tidak tahu (diacak ISP)"**
 1. Factory reset (tombol ±10 detik) → password kembali ke pabrik
@@ -168,7 +168,7 @@ Langkah 4 saja (diulang setiap kali router ter-reset).
 
 ---
 
-## ⚠️ Catatan penting
+##  Catatan penting
 
 - `TelnetCfg` bisa dikunci via `sendcmd` (`TS_Enable=1`, `Lan_Enable=1`,
   `Lan_EnableAfterOlt=1`), namun pada build P1N84A daemon telnet **tidak autostart
@@ -181,12 +181,12 @@ Langkah 4 saja (diulang setiap kali router ter-reset).
   menu pada build IndiHome — arsip konfigurasi bisa diganti dengan dump
   `sendcmd 1 DB p <Tabel>` per tabel.
 
-## 📚 Referensi
+##  Referensi
 
 - [rendlavenu/zte-f670l-toolkit](https://github.com/rendlavenu/zte-f670l-toolkit) — implementasi challenge `/webFac` (MIT)
 - [LogDict — kumpulan perintah telnet ZTE](https://www.logdict.com/archives/zhong-xing-guang-mao-telnetpei-zhi-ming-ling-hui-zong)
 - [right.com.cn — pola "固化" + disable TR-069](https://www.right.com.cn/forum/thread-8481756-1-1.html)
 
-## 📄 Lisensi
+##  Lisensi
 
 MIT — lihat [LICENSE](LICENSE).
